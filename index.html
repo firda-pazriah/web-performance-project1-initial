@@ -5,10 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Tech Shop</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Heebo:300,400,600,700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="/css/styles.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
     <!-- Google Tag Manager -->
@@ -25,26 +21,6 @@
       })(window, document, "script", "dataLayer", "GTM-PKK35GL5");
     </script>
     <!-- End Google Tag Manager -->
-
-    <!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
-    <script
-      type="text/javascript"
-      src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js"
-      charset="UTF-8"
-    ></script>
-    <script type="text/javascript" charset="UTF-8">
-      cookieconsent.run({
-        notice_banner_type: "simple",
-        consent_type: "express",
-        palette: "light",
-        language: "en",
-        page_load_consent_levels: ["strictly-necessary"],
-        notice_banner_reject_button_hide: false,
-        preferences_center_close_button_hide: false,
-        page_refresh_confirmation_buttons: false,
-        website_name: "Performance Course",
-      });
-    </script>
   </head>
 
   <body>
@@ -74,7 +50,9 @@
             <li><a href="about.html">About us</a></li>
             <li><a href="index.html#best-sellers-section">Best Sellers</a></li>
             <li><a href="index.html#newsletter-section">Newsletter</a></li>
-            <li class="menu-icon"><img width="29" height="20" src="images/menu_icon.webp" /></li>
+            <li class="menu-icon">
+              <img width="29" height="20" src="images/menu_icon.webp" alt="menu icon " />
+            </li>
           </ul>
         </nav>
       </div>
@@ -87,14 +65,16 @@
           height="576"
           media="(max-width: 576px)"
           srcset="images/Hero_Mobile.webp"
+          fetchpriority="high"
         />
         <source
           width="960"
           height="770"
           media="(max-width: 960px)"
           srcset="images/Hero_Tablet.webp"
+          fetchpriority="high"
         />
-        <img width="1920" height="893" src="images/Hero_Desktop.webp" />
+        <img width="1920" height="893" src="images/Hero_Desktop.webp" fetchpriority="high" />
       </picture>
 
       <div class="hero-content">
@@ -241,5 +221,27 @@
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/products.js"></script>
+
+    <!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
+    <script defer
+      type="text/javascript"
+      src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js"
+      charset="UTF-8"
+    ></script>
+    <script defer type="text/javascript" charset="UTF-8">
+      document.addEventListener('DOMContentLoaded', function(){
+        cookieconsent.run({
+          notice_banner_type: "simple",
+          consent_type: "express",
+          palette: "light",
+          language: "en",
+          page_load_consent_levels: ["strictly-necessary"],
+          notice_banner_reject_button_hide: false,
+          preferences_center_close_button_hide: false,
+          page_refresh_confirmation_buttons: false,
+          website_name: "Performance Course",
+        });
+      })
+    </script>
   </body>
 </html>
